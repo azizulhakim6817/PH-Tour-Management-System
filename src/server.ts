@@ -47,14 +47,4 @@ process.on("uncaughtException", (err) => {
   }
   process.exit(1);
 });
-//throw new Error("I forgot to handle this local error");
 
-//*3. Single termination sigterm--(cloud flatform--AWS-OFF/shudown)-server-error-crahs--
-/* process.on("SIGINT", () => {
-  console.log("Sigterm single recieve .. server shut down... ");
-  if (server) {
-    server.close();
-    process.exit(1);
-  }
-  process.exit(1);
-}); */

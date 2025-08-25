@@ -4,7 +4,7 @@ export enum Role {
   SUPER_ADMIN = "SUPER_ADMIN",
   ADMIN = "ADMIN",
   USER = "USER",
-  GUIDE = "GUIDE",
+  AGENT = "AGENT",
 }
 
 /*auth provider
@@ -36,5 +36,5 @@ export interface IUser {
   auths: IAuthProvider[];
   role: Role;
   bookings?: Types.ObjectId[];
-  guide?: Types.ObjectId[];
+  
 }

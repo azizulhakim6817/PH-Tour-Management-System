@@ -19,7 +19,7 @@ router.post(
 // /booking -> /login -> successfull google login -> booking frontend
 // /login -> successfull google login -> /fronend
 
-// http://localhost:8000/api/v1/auth/google?redirect=/booking-->frontend url--> http://localhost:5173/
+//http://localhost:8000/api/v1/auth/google?redirect=/booking-->frontend url--> http://localhost:5173/
 //http://localhost:8000/api/v1/auth/google ---> frontend url ---> http://localhost:5173/
 router.get("/google", async (req, res, next) => {
   const redirect = req.query.redirect || "/";
@@ -28,7 +28,6 @@ router.get("/google", async (req, res, next) => {
     state: redirect as string,
   })(req, res, next);
 });
-
 
 // /api/v1/auth/google/callback?state=/booking
 router.get(

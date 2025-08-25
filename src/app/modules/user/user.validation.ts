@@ -3,11 +3,11 @@ import { IsActive, Role } from "./user.interface";
 
 //! create users data ---------------------------------
 export const createUserZodSchema = z.object({
-  /*   name: z
+  name: z
     .string({ invalid_type_error: "Name must be a string" })
     .min(2, { message: "Name too short, Minimum 2 characters" })
-    .max(50, { message: "Name too long, Maximum 50 characters" }), */
-  name: z.object({
+    .max(50, { message: "Name too long, Maximum 50 characters" }),
+  /* name: z.object({
     firstName: z
       .string({ invalid_type_error: "Name must be a string" })
       .min(2, { message: "Name too short, Minimum 2 characters" })
@@ -16,7 +16,7 @@ export const createUserZodSchema = z.object({
       .string({ invalid_type_error: "Name must be a string" })
       .min(2, { message: "Name too short, Minimum 2 characters" })
       .max(50, { message: "Name too long, Maximum 50 characters" }),
-  }),
+  }), */
 
   email: z
     .string()

@@ -49,7 +49,7 @@ const updateUser = async (
 
   //payload check----------------
   if (payload.role) {
-    if (decodedToken.role == Role.USER || decodedToken.role === Role.GUIDE) {
+    if (decodedToken.role == Role.USER || decodedToken.role === Role.AGENT) {
       throw new AppError(httpStatus.FORBIDDEN, "You are nt authorized!");
     }
     if (payload.role === Role.SUPER_ADMIN && decodedToken.role === Role.ADMIN) {

@@ -1,6 +1,5 @@
 import AppError from "../../errorHelpers/AppError";
-import { BOOKING_STATUS } from "../booking/booking.interface";
-import { Booking } from "../booking/booking.model";
+
 import { ISSLCommerz } from "../sslCommerz/sslCommer.interface";
 import { SSLService } from "../sslCommerz/sslCommerz.service";
 import { PAYMENT_STATUS } from "./payment.interface";

@@ -34,7 +34,6 @@ const updateUser = catchAsync(
 
     //index.d.ts user error is not show -------
     const verifiedToken = req.user;
-    console.log("verifi: ", verifiedToken);
 
     const user = await UserServices.updateUser(userId, payload, verifiedToken as JwtPayload);
 

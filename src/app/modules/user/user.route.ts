@@ -16,7 +16,7 @@ router.post(
 //! get all user Super Admin----------------------------------------------------
 router.get(
   "/all-users",
-  checkAuth(Role.ADMIN, Role.SUPER_ADMIN),
+  checkAuth(Role.ADMIN, Role.SUPER_ADMIN, Role.AGENT),
   UserController.getAllUser
 );
 //! Update user----------------------------------------------------

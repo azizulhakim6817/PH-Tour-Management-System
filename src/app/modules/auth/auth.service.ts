@@ -1,11 +1,9 @@
 import AppError from "../../errorHelpers/AppError";
-import { IUser } from "../user/user.interface";
 import { User } from "../user/user.module";
 import httpStatus from "http-status-codes";
 import bcryptjs from "bcryptjs";
 import {
   createNewAccessTokenWithRefreshToken,
-  createUserTokent,
 } from "../../utils/userToken";
 import { JwtPayload } from "jsonwebtoken";
 import { envVars } from "../../../config/env";

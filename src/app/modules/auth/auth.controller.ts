@@ -13,15 +13,9 @@ import passport from "passport";
 //! Login-------------------
 const credentialsLogin = catchAsync(
   async (req: Request, res: Response, next: NextFunction) => {
-    //const loginInfo = await AuthService.credentialsLogin(req.body);
-
     //passport -----------------------
     passport.authenticate("local", async (err: any, user: any, info: any) => {
       if (err) {
-        //not => throw new AppError(303, "lkas")
-        //not => next(err)
-        //right => return next(err);
-        //return new AppError(401, err);
         return next(new AppError(401, err));
       }
 
